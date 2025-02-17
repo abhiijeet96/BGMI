@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BGMI Player Profile</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://www.pinterest.com/pin/290763719707742960/'); /* Change this to your wallpaper */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        .profile-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .profile-card {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+        }
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #ffa500;
+        }
+        button {
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #ffa500;
+            border: none;
+            color: black;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #ff7800;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-card">
+            <img src="https://www.pinterest.com/pin/668784613442799975/" alt="Player Avatar" class="avatar">
+            <h1 id="Lively Beast">Player Name</h1>
+            <p><strong>Level:</strong> <span id="playerLevel">50</span></p>
+            <p><strong>Clan:</strong> <span id="playerClan">Warriors</span></p>
+            <button onclick="updateProfile()">Edit Profile</button>
+        </div>
+    </div>
+
+    <script>
+        function updateProfile() {
+            let name = prompt("Lively Beast:");
+            let level = prompt("76:");
+            let clan = prompt("Beast clan:");
+
+            if (name) document.getElementById("playerName").innerText = name;
+            if (level) document.getElementById("playerLevel").innerText = level;
+            if (clan) document.getElementById("playerClan").innerText = clan;
+        }
+    </script>
+</body>
+</html>
